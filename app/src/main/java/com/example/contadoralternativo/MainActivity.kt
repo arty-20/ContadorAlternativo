@@ -28,23 +28,48 @@ class MainActivity : AppCompatActivity() {
         boton?.setOnClickListener(object : View.OnClickListener {
 
             override fun onClick(v: View?) {
-
-
-
+                var name = entradaUsuario?.getText().toString()
                 contadorNuevo +=1
-                texto?.append("usuario!!  boton se ha clickeado $contadorNuevo vez")
+                if(contadorNuevo == 1){
+                    if(name.isEmpty()){
+                        texto?.append("El botón ha sido clickeado $contadorNuevo vez\n")
+                    }else{
+                        texto?.append("El usuario $name ha clickeado $contadorNuevo vez\n")
+                    }
+                }else{
+                    if(name.isEmpty()){
+                        texto?.append("El botón ha sido clickeado $contadorNuevo veces\n")
+                    }else{
+                        texto?.append("El usuario $name ha clickeado $contadorNuevo veces\n")
+                    }
+                }
 
-                Toast.makeText(this@MainActivity,"se clickeo el boton",Toast.LENGTH_SHORT).show()
 
 
+                if((contadorNuevo-1%10) == 0){
+
+                }else{
+                    if((contadorNuevo-1)%10 == 0){
+                        texto?.setText("")
+                        if(name.isEmpty()){
+                            texto?.append("El botón ha sido clickeado $contadorNuevo veces\n")
+                        }else{
+                            texto?.append("El usuario $name ha clickeado $contadorNuevo veces\n")
+                        }
+                    }
+                }
+                avisoEmergente(contadorNuevo)
+//                Toast.makeText(this@MainActivity,"se clickeo el boton",Toast.LENGTH_SHORT).show()
             }
-
         })
-
     }
 
-    private fun avisoEmergente(view:View){
+    private fun avisoEmergente(a: Int){
+        if(a%10 == 0){
+            Toast.makeText(this,"El boton ha sido clickeado 10 veces",Toast.LENGTH_SHORT).show()
 
-        Toast.makeText(this,"se boton se ha clickeado 10 veces",Toast.LENGTH_SHORT).show()
+
+        }
+
     }
 }

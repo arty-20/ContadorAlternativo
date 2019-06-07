@@ -7,38 +7,43 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
     <TextView
-            android:text="TextView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/botoncito" android:layout_marginBottom="128dp"
+            app:layout_constraintTop_toBottomOf="@+id/botoncito" android:layout_marginBottom="84dp"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="29dp" app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginStart="29dp" android:layout_marginEnd="29dp" android:layout_marginRight="29dp"/>
     <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/botoncito" android:layout_marginTop="47dp"
+            android:text="@android:string/ok"
+            android:layout_width="51dp"
+            android:layout_height="41dp"
+            android:id="@+id/botoncito"
+            android:layout_marginTop="50dp"
             app:layout_constraintStart_toEndOf="@+id/editText" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="43dp" app:layout_constraintBottom_toTopOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="3dp" android:layout_marginRight="3dp"/>
+            android:layout_marginBottom="20dp" app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="34dp"
+            android:layout_marginRight="34dp"/>
     <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="46dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/editText"
-            android:layout_marginTop="57dp" app:layout_constraintEnd_toStartOf="@+id/botoncito"
-            android:layout_marginBottom="43dp" app:layout_constraintBottom_toTopOf="@+id/textView"
+            android:hint="Usuario..."
+            android:layout_marginTop="53dp" app:layout_constraintEnd_toStartOf="@+id/botoncito"
+            android:layout_marginBottom="20dp" app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginEnd="20dp" android:layout_marginRight="20dp" android:hint="Ingrese El nombre"/>
+            android:layout_marginLeft="29dp" android:layout_marginStart="29dp" android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"/>
     <TextView
-            android:text="Desaroolado por: usuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/textView2" app:layout_constraintHorizontal_bias="0.715"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView"
-            android:layout_marginBottom="56dp"/>
+            android:text="Desarrollado por: Arturo Adrián HUaylla"
+            android:layout_width="255dp"
+            android:layout_height="17dp"
+            android:id="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="28dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="28dp"
+            android:layout_marginBottom="36dp" android:layout_marginTop="31dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="37dp" android:layout_marginRight="37dp"/>
 </android.support.constraint.ConstraintLayout>
